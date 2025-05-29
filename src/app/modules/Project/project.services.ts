@@ -1,13 +1,12 @@
 import prisma from "../../helper/prisma";
 import { IPaginationOptions } from "../../interface/pagination.type";
 import { paginationHelper } from "../../helper/paginationHelper";
-import { Prisma } from "../../../generated/prisma";
 import httpStatus from "http-status";
-import { TProject } from "./project.interface";
 import { projectSearchableFields } from "./project.constants";
 import { FileUploader } from "../../helper/fileUploader";
 import { IFile } from "../../interface/file.type";
 import AppError from "../../error/AppError";
+import { Prisma } from "@prisma/client";
 
 export const createProjectIntoDB = async (req: any) => {
   const file = req.file;

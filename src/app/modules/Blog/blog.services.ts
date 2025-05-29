@@ -1,13 +1,14 @@
 import prisma from "../../helper/prisma";
 import { IPaginationOptions } from "../../interface/pagination.type";
 import { paginationHelper } from "../../helper/paginationHelper";
-import { Prisma } from "../../../generated/prisma";
+
 import httpStatus from "http-status";
 import { IBlog } from "./blog.interface";
 import { FileUploader } from "../../helper/fileUploader";
 import { IFile } from "../../interface/file.type";
 import AppError from "../../error/AppError";
 import { blogSearchableFields } from "./blog.constants";
+import { Prisma } from "@prisma/client";
 
 export const createBlogIntoDB = async (req: any) => {
   const file = req.file as IFile | undefined;

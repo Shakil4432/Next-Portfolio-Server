@@ -7,7 +7,7 @@ import config from "../../config";
 import { Secret } from "jsonwebtoken";
 
 import { IResetPassword } from "./auth.interface";
-import { IUser } from "../User/user.interface";
+
 import AppError from "../../error/AppError";
 import generateToken from "../../utils/generateToken";
 import verifyToken from "../../utils/verifyToken";

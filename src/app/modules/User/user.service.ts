@@ -4,8 +4,9 @@ import AppError from "../../error/AppError";
 import httpStatus from "http-status";
 import { IPaginationOptions } from "../../interface/pagination.type";
 import { paginationHelper } from "../../helper/paginationHelper";
-import { Prisma } from "../../../generated/prisma";
+
 import { userSearchAbleFields } from "./user.constants";
+import { Prisma } from "@prisma/client";
 const UserRegisterIntoDB = async (payload: any) => {
   console.log(payload);
   const hashedPassword: string = await bcrypt.hash(payload.password, 12);

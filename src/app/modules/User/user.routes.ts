@@ -1,4 +1,4 @@
-import express, { NextFunction, Request, Response } from "express";
+import express from "express";
 
 import { UserValidations } from "./user.validation";
 import { userControllers } from "./user.controller";
